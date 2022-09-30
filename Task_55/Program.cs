@@ -11,6 +11,7 @@ Print2DArray(numbers);
 Console.WriteLine();
 
 ChangedRowsColumns(numbers);
+Print2DArray(numbers);
 
 int EnterInt(string prompt)
 {
@@ -51,14 +52,22 @@ void ChangedRowsColumns(int[,] numbers)
 {
     if (IsPossible(numbers))
     {
+        // int[,] numbersNew = new int[numbers.GetLength(0), numbers.GetLength(1)];
         for (int i = 0; i < numbers.GetLength(0); i++)
         {
-            for (int j = 0; j < numbers.GetLength(1); j++)
+            for (int j = i; j < numbers.GetLength(1); j++)
             {
-                Console.Write($"{numbers[j, i],2} ");
+                Swap(ref numbers[i, j], ref numbers[j,i]);
             }
-            Console.WriteLine();
         }
+        // numbers[i, j] = numbersNew[i, j];
     }
     else Console.WriteLine("Заменить строки на столбцы невозможно.");
+}
+
+void Swap(ref int a, ref int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
 }
