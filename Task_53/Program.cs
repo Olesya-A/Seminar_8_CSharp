@@ -41,13 +41,6 @@ void Print2DArray(int[,] numbers)
     }
 }
 
-// void Swap(int a, int b)
-// {
-//     int temp = a;
-//     a = b;
-//     b = temp;
-// }
-
 void Changed2DArray(int[,] numbers)
 {
     for (int j = 0; j < numbers.GetLength(1); j++)
