@@ -10,7 +10,7 @@ Print2DArray(numbers);
 
 Console.WriteLine();
 
-Changed2DArray(numbers);
+ChangedRowsColumns(numbers);
 
 int EnterInt(string prompt)
 {
@@ -47,7 +47,7 @@ bool IsPossible(int[,] numbers)
 }
 
 
-void Changed2DArray(int[,] numbers)
+void ChangedRowsColumns(int[,] numbers)
 {
     if (IsPossible(numbers))
     {
