@@ -9,7 +9,7 @@ Print2DArray(numbers);
 
 Console.WriteLine();
 
-Changed2DArray(numbers);
+ChangedFirstEndRowsIn2DArray(numbers);
 Print2DArray(numbers);
 
 int EnterInt(string prompt)
@@ -41,7 +41,7 @@ void Print2DArray(int[,] numbers)
     }
 }
 
-void Changed2DArray(int[,] numbers)
+void ChangedFirstEndRowsIn2DArray(int[,] numbers)
 {
     for (int j = 0; j < numbers.GetLength(1); j++)
     {
