@@ -52,7 +52,6 @@ void ChangedRowsColumns(int[,] numbers)
 {
     if (IsPossible(numbers))
     {
-        // int[,] numbersNew = new int[numbers.GetLength(0), numbers.GetLength(1)];
         for (int i = 0; i < numbers.GetLength(0); i++)
         {
             for (int j = i; j < numbers.GetLength(1); j++)
@@ -60,7 +59,6 @@ void ChangedRowsColumns(int[,] numbers)
                 Swap(ref numbers[i, j], ref numbers[j,i]);
             }
         }
-        // numbers[i, j] = numbersNew[i, j];
     }
     else Console.WriteLine("Заменить строки на столбцы невозможно.");
 }
